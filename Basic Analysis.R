@@ -46,3 +46,13 @@ joined <- list(extract2015, extract2016, extract2017, extract2018, extract2019) 
 #for each row/country, then sorts the mean from lowest to highest
 joined$rMean <- sort(apply(joined[2:6],1,mean,na.rm=TRUE))
 
+#Renames the columns of the table
+colnames(joined) <- c('Country',
+                      '2015.Score',
+                      '2016.Score',
+                      '2017.Score',
+                      '2018.Score',
+                      '2019.Score', 
+                      'Mean.Score')
+#Views the output
+View(joined)
